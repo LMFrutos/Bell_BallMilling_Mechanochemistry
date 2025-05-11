@@ -6,7 +6,6 @@ Compute_W is a lightweight Python 3 program that builds the work surface
 W(φ,θ) associated with applying an isotropic external pressure to a molecule.
 The code is fully vectorised with NumPy, performs no graphical output, and communicates exclusively through text files.
 
-.
 ├── compute_W.py   ← main script
 ├── R_min.txt      ← starting geometry (local minimum)
 ├── R_TS.txt       ← target geometry (e.g. transition state)
