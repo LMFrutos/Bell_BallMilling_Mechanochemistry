@@ -4,7 +4,7 @@ Ball-Milling-Bell-model
 -----------------------
 -----------------------
 
-This program evaluates the work term W(φ,θ) applied to a molecular geometry 
+This program evaluates the work term W(φ,θ) applied to a molecular structure 
 under external pressure.
 
 General
@@ -17,7 +17,7 @@ General
    (formats are described below).
 2.  Output files with the results:
         • output.txt  – main numbers and diagnostics
-        • W.mtx       – W(φ,θ) in Matrix-Market format (dense array)
+        • W.mtx       – W(φ,θ) in Matrix-Market format 
 
 
 File formats
@@ -170,7 +170,7 @@ def main() -> None:
 
     # ---- 4.   External force corresponding to the requested pressure -----
     # Force (nN) according to the original formula:
-    #   F_ext = P_ext_GPa * 0.01 * π * R_sphere²
+    #   F_ext = P_ext_GPa * 0.01 * π * R_sphere**2
     F_ext = P_ext_GPa * 0.01 * np.pi * R_sphere**2    # nN
     Fext_i = F_ext / N                                # per-atom force
 
@@ -179,7 +179,7 @@ def main() -> None:
     ntheta = 100
     dphi   = 2.0 * np.pi / nphi
     dtheta = np.pi / ntheta
-    factor_conv = 1.88973 * 627.5 / 82.387            # conversion to a.u.
+    factor_conv = 1.88973 * 627.5 / 82.387            # conversion to a.u. -> kcal/mol
 
     W      = np.zeros((nphi, ntheta))
     R_mat  = np.zeros_like(W)
